@@ -36,7 +36,7 @@ The name reflects a crucial reality in data privacy:
   {"category": "Account", "text": "Contact [support@apple.com] or SSN: [123-45-6789] for verification."}
   ```
 
-  3. `3_final_output.jsonl` (Anonymized via Qwen-2.5-7B contextual replacement):
+  3. `3_final_output.jsonl` (Contextual replacement via Qwen-2.5-7B):
   ```jsonl
   {"category": "Customer Service", "text": "Dear Michael Brown, Your order #12345 from Tesla Store in Portland has been shipped."}
   {"category": "Account", "text": "Contact support@techcorp.com or SSN: 987-65-4321 for verification."}

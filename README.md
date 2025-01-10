@@ -75,8 +75,8 @@ llm = LLM(
 Find our professional PII leakage detection tool on AWS Marketplace:
 
 ### AWS Marketplace Listing
-- **Product Name**: Mask9Leak1 Professional
-- **Publisher**: [Your Company Name]
+- **Product Name**: Secludy PII leakage detection
+- **Publisher**: Secludy
 - **Category**: Security & Privacy Tools
 - **Link**: [AWS Marketplace Link]
 

@@ -70,6 +70,7 @@ llm = LLM(
 ```
 
 ## PII Leakage Detection Tool
+![image](https://github.com/user-attachments/assets/da851a15-3aab-4fcd-b3fa-de4bdec96e3b)
 
 Find our professional PII leakage detection tool on AWS Marketplace:
 

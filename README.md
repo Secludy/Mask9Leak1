@@ -1,6 +1,6 @@
 # Mask9Leak1
 
-A demonstration tool revealing how traditional data masking techniques, while protecting 9 out of 10 entities, consistently fail to secure that critical 1 in 10. This repository provides concrete evidence of masking vulnerabilities and re-identification risks in real-world scenarios.
+A demonstration tool revealing how even state-of-art data masking techniques,i.e., BERT + QWEN-2.5-7B +regex, while protecting 9 out of 10 entities, consistently fail to secure that critical 1 in 10. This repository provides concrete evidence of masking vulnerabilities and re-identification risks in real-world scenarios.
 
 ## Why Mask9Leak1?
 
@@ -21,12 +21,6 @@ The name reflects a crucial reality in data privacy:
     - Bitcoin Addresses
     - Email Addresses
 
-- **Vulnerability Demonstration**:
-  - Shows how context can defeat masking
-  - Demonstrates entity correlation attacks
-  - Reveals pattern preservation issues
-  - Exposes frequency analysis vulnerabilities
-
 - **Batch Processing System**:
   Processes JSONL files with intermediate outputs at each stage:
 
@@ -36,13 +30,13 @@ The name reflects a crucial reality in data privacy:
   {"category": "Account", "text": "Contact support@apple.com or SSN: 123-45-6789 for verification."}
   ```
 
-  2. `2_bracketed.jsonl` (Entity-Marked):
+  2. `2_bracketed.jsonl` (Entity-Marked via BERT):
   ```jsonl
   {"category": "Customer Service", "text": "Dear [John Smith], Your order #12345 from [Apple Store] in [Seattle] has been shipped."}
   {"category": "Account", "text": "Contact [support@apple.com] or SSN: [123-45-6789] for verification."}
   ```
 
-  3. `3_final_output.jsonl` (Anonymized):
+  3. `3_final_output.jsonl` (Anonymized via Qwen-2.5-7B contextual replacement):
   ```jsonl
   {"category": "Customer Service", "text": "Dear Michael Brown, Your order #12345 from Tesla Store in Portland has been shipped."}
   {"category": "Account", "text": "Contact support@techcorp.com or SSN: 987-65-4321 for verification."}
